@@ -90,7 +90,7 @@ if (cluster.isMaster) {
         });
     });
 
-    http.createServer(app).listen(app.get('port'), () => {
+    http.createServer(app).listen(app.get('port'), '0.0.0.0', () => {
         console.log('Express worker process ' + cluster.worker.id + ' listening on ' + app.get('port'));
     });
 }

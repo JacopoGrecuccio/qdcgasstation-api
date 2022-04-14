@@ -178,7 +178,7 @@ class TransactionController extends CachingRedisBackedController {
     _toGwei (price) {
         price = parseFloat(price);
         if (isNaN(price)) return false;
-        return parseFloat(price) / 10.0;
+        return parseFloat(price) / 1.0;
     }
 
 }
